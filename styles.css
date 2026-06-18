@@ -1,0 +1,72 @@
+:root {
+  --color-primary: #2563eb;
+  --color-background: #f8fafc;
+  --color-text: #1e293b;
+  --color-white: #ffffff;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+
+  --fs-small: 0.875rem;
+  --fs-body: 1rem;
+  --fs-h2: 1.5rem;
+  --fs-h1: 2.5rem;
+
+  --radius: 0.5rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: Arial, sans-serif;
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--space-md);
+}
+
+nav {
+  margin-top: var(--space-sm);
+}
+
+nav a {
+  color: var(--color-white);
+  text-decoration: none;
+  margin-right: var(--space-md);
+}
+
+main {
+  padding: var(--space-lg);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  margin-bottom: var(--space-sm);
+}
+
+section {
+  background-color: var(--color-white);
+  padding: var(--space-md);
+  border-radius: var(--radius);
+}
+
+footer {
+  text-align: center;
+  padding: var(--space-md);
+  margin-top: var(--space-lg);
+}
