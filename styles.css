@@ -111,8 +111,6 @@ footer {
   justify-content: center;
   padding: 20px;
 }
-
-/* ===== TABLET ===== */
 @media (min-width: 768px) {
 
   .hero {
@@ -125,8 +123,6 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-/* ===== DESKTOP ===== */
 @media (min-width: 1280px) {
 
   .projects {
