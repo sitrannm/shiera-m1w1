@@ -2,31 +2,127 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("dark");
+        }
+    </script>
+
     <link rel="stylesheet" href="styles.css">
+
+    <title>My Portfolio</title>
 </head>
-<body>
 
-<header>
-    <h1>My Portfolio</h1>
+<body class="bg-white text-gray-900 dark:bg-zinc-900 dark:text-white transition-colors duration-300">
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<header class="shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-6">
+
+        <h1 class="font-bold text-brand">
+            My Portfolio
+        </h1>
+
+        <nav class="flex gap-6">
+            <a href="index.html" class="hover:text-brand">Home</a>
+            <a href="projects.html" class="hover:text-brand">Projects</a>
+            <a href="contact.html" class="hover:text-brand">Contact</a>
+        </nav>
+
+        <button id="theme-toggle"
+            class="border rounded-lg px-4 py-2 hover:bg-brand hover:text-white">
+            🌙
+        </button>
+
+    </div>
 </header>
 
 <main>
-    <section>
-        <h2>About Me</h2>
-        <p>Hello! I am learning web development.</p>
+
+    <!-- Hero Section -->
+    <section class="max-w-6xl mx-auto px-6 py-24 text-center">
+
+        <h1 class="font-bold text-brand mb-6">
+            Hi, I'm Sitra
+        </h1>
+
+        <p class="max-w-2xl mx-auto text-lg">
+            I'm a Material Science and Engineering student and a passionate UI/UX
+            designer who enjoys creating clean, modern, and user-friendly digital
+            experiences.
+        </p>
+
+        <div class="mt-10 flex justify-center gap-4">
+
+            <a href="projects.html"
+                class="bg-brand text-white px-6 py-3 rounded-lg hover:opacity-90">
+                View Projects
+            </a>
+
+            <a href="contact.html"
+                class="border border-brand text-brand px-6 py-3 rounded-lg hover:bg-brand hover:text-white">
+                Contact Me
+            </a>
+
+        </div>
+
     </section>
+
+    <!-- About -->
+    <section class="max-w-6xl mx-auto px-6 py-20">
+
+        <h2 class="font-bold mb-6">
+            About Me
+        </h2>
+
+        <p class="leading-8">
+            I enjoy designing user interfaces, learning modern web technologies,
+            and building responsive websites. My goal is to become a professional
+            UI/UX designer and front-end developer.
+        </p>
+
+    </section>
+
+    <!-- Skills -->
+    <section class="max-w-6xl mx-auto px-6 py-20">
+
+        <h2 class="font-bold mb-8">
+            Skills
+        </h2>
+
+        <div class="flex flex-wrap gap-4">
+
+            <span class="bg-brand text-white px-4 py-2 rounded-full">HTML</span>
+            <span class="bg-brand text-white px-4 py-2 rounded-full">CSS</span>
+            <span class="bg-brand text-white px-4 py-2 rounded-full">Tailwind CSS</span>
+            <span class="bg-brand text-white px-4 py-2 rounded-full">UI/UX</span>
+            <span class="bg-brand text-white px-4 py-2 rounded-full">Figma</span>
+            <span class="bg-brand text-white px-4 py-2 rounded-full">Git & GitHub</span>
+
+        </div>
+
+    </section>
+
 </main>
 
-<footer>
-    <p>Copyright 2026</p>
+<footer class="text-center p-6 border-t">
+Copyright © 2026
 </footer>
+
+<script>
+const button = document.getElementById("theme-toggle");
+
+button.addEventListener("click", () => {
+    document.documentElement.classList.toggle("dark");
+
+    if (document.documentElement.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
+    }
+});
+</script>
 
 </body>
 </html>
